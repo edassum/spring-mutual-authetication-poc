@@ -16,8 +16,9 @@ public class HttpClient implements CommandLineRunner {
 	@Override
 	public void run(String... args) {
 		System.out.println("Inside run method from service -1");
-		ResponseEntity<String> response = template.getForEntity("http://localhost:8443/simple",String.class);
-		System.out.println(response.getBody());
+	//	ResponseEntity<String> response = template.getForEntity("https://localhost:8443/simple",String.class);
+	//	System.out.println(response.getBody());
+		System.out.println("Just printing");
 	}
 
 }

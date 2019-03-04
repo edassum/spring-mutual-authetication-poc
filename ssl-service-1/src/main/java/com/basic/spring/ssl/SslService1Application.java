@@ -8,12 +8,12 @@ import org.springframework.web.client.RestTemplate;
 @SpringBootApplication
 public class SslService1Application {
 	static {
-		System.setProperty("javax.net.debug", "all");
+		//System.setProperty("javax.net.debug", "all");
 		System.setProperty("jdk.tls.client.protocols", "TLSv1.2");
 		System.setProperty("https.protocols", "TLSv1.2");
-		System.setProperty("javax.net.ssl.trustStore", "D:\\keys\\client\\MyClient.jks");
+		System.setProperty("javax.net.ssl.trustStore", "D:\\keys\\ssl-conf\\MyKeystore.jks");
 		System.setProperty("javax.net.ssl.trustStorePassword", "password");
-		System.setProperty("javax.net.ssl.keyStore", "D:\\keys\\client\\MyClient.jks");
+		System.setProperty("javax.net.ssl.keyStore", "D:\\keys\\ssl-conf\\MyKeystore.jks");
 		System.setProperty("javax.net.ssl.keyStorePassword", "password");
 		javax.net.ssl.HttpsURLConnection.setDefaultHostnameVerifier(new javax.net.ssl.HostnameVerifier() {
 

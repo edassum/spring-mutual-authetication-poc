@@ -3,8 +3,6 @@
  */
 package com.basic.spring.ssl.util;
 
-import java.io.File;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.http.ResponseEntity;
@@ -22,12 +20,12 @@ public class HttpClient implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		String filename= "key.pem";
+		/*String filename= "key.pem";
 		File loadkeyFile = keysUtil.loadkeyFile(filename);
 		
-		System.out.println(loadkeyFile);
-	//	ResponseEntity<String> response = template.getForEntity("http://localhost:8080/hello",String.class);
-	//	System.out.println(response.getBody());
+		System.out.println(loadkeyFile);*/
+		ResponseEntity<String> response = template.getForEntity("https://localhost:8444/hello",String.class);
+		System.out.println(response.getBody());
 		System.out.println("Hello");
 	}
 }
